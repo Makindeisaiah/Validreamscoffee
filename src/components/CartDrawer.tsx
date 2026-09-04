@@ -37,21 +37,22 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
         onClick={onClose}
       />
 
-      <div className="fixed inset-y-0 right-0 max-w-full flex pl-10">
-        <div className="w-screen max-w-md bg-[#FBF8F3] shadow-2xl flex flex-col border-l border-[#2C221E]/10 animate-in slide-in-from-right duration-300">
+      <div className="fixed inset-y-0 right-0 max-w-full flex pl-0 sm:pl-10">
+        <div className="w-full sm:w-screen max-w-md bg-[#FBF8F3] shadow-2xl flex flex-col border-l border-[#2C221E]/10 animate-in slide-in-from-right duration-300">
           
           {/* Header */}
-          <div className="p-6 border-b border-[#2C221E]/10 flex items-center justify-between bg-white">
+          <div className="p-4 sm:p-6 border-b border-[#2C221E]/10 flex items-center justify-between bg-white">
             <div className="flex items-center gap-2">
               <ShoppingBag className="w-5 h-5 text-[#9E5328]" />
-              <h2 className="font-serif text-lg font-bold text-[#1D1512]">
+              <h2 className="font-serif text-base sm:text-lg font-bold text-[#1D1512]">
                 Your Sealed Order ({items.reduce((sum, i) => sum + i.quantity, 0)})
               </h2>
             </div>
             <button
               type="button"
               onClick={onClose}
-              className="p-2 text-[#6B5A51] hover:text-[#1D1512] rounded-full hover:bg-[#F5EFEB]"
+              className="p-2 text-[#6B5A51] hover:text-[#1D1512] rounded-full hover:bg-[#F5EFEB] min-w-[44px] min-h-[44px] flex items-center justify-center"
+              aria-label="Close cart drawer"
             >
               <X className="w-5 h-5" />
             </button>
@@ -167,7 +168,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
 
           {/* Footer Checkout Summary */}
           {items.length > 0 && (
-            <div className="p-6 bg-white border-t border-[#2C221E]/10 space-y-4">
+            <div className="p-4 sm:p-6 pb-[calc(1.5rem+env(safe-area-inset-bottom,0px))] bg-white border-t border-[#2C221E]/10 space-y-4">
               <div className="space-y-1.5 text-xs text-[#524138]">
                 <div className="flex justify-between">
                   <span>Subtotal</span>
@@ -193,14 +194,14 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 id="cart-checkout-btn"
                 type="button"
                 onClick={onCheckout}
-                className="w-full py-3.5 bg-[#9E5328] hover:bg-[#85441E] text-white rounded-xl font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2 group"
+                className="w-full py-4 bg-[#9E5328] hover:bg-[#85441E] text-white rounded-xl font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2 group min-h-[48px] active:scale-[0.99]"
               >
                 <span>Proceed to Checkout</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </button>
 
-              <div className="flex items-center justify-center gap-2 text-[11px] text-[#6B5A51]">
-                <ShieldCheck className="w-4 h-4 text-[#2F4839]" />
+              <div className="flex items-center justify-center gap-2 text-[10px] sm:text-[11px] text-[#6B5A51]">
+                <ShieldCheck className="w-4 h-4 text-[#2F4839] shrink-0" />
                 <span>Harvest-sealed guarantee • Safe 256-bit SSL checkout</span>
               </div>
             </div>

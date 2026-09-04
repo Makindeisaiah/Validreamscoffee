@@ -221,7 +221,7 @@ export const ExtendedViews: React.FC<ExtendedViewsProps> = ({
                       required
                       type="text"
                       placeholder="Jane Doe"
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#2C221E]/20 text-xs focus:ring-2 focus:ring-[#9E5328] focus:outline-none"
+                      className="w-full px-3.5 py-3 rounded-xl border border-[#2C221E]/20 text-base sm:text-xs focus:ring-2 focus:ring-[#9E5328] focus:outline-none min-h-[44px]"
                     />
                   </div>
                   <div>
@@ -230,12 +230,12 @@ export const ExtendedViews: React.FC<ExtendedViewsProps> = ({
                       required
                       type="email"
                       placeholder="jane@example.com"
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#2C221E]/20 text-xs focus:ring-2 focus:ring-[#9E5328] focus:outline-none"
+                      className="w-full px-3.5 py-3 rounded-xl border border-[#2C221E]/20 text-base sm:text-xs focus:ring-2 focus:ring-[#9E5328] focus:outline-none min-h-[44px]"
                     />
                   </div>
                   <div>
                     <label className="block text-xs font-semibold text-[#1D1512] mb-1">Inquiry Topic</label>
-                    <select className="w-full px-3.5 py-2.5 rounded-xl border border-[#2C221E]/20 text-xs focus:ring-2 focus:ring-[#9E5328] focus:outline-none bg-white">
+                    <select className="w-full px-3.5 py-3 rounded-xl border border-[#2C221E]/20 text-base sm:text-xs focus:ring-2 focus:ring-[#9E5328] focus:outline-none bg-white min-h-[44px]">
                       <option>Home Roasting Advice</option>
                       <option>Current Harvest Availability</option>
                       <option>Wholesale (25lb / 50lb bags)</option>
@@ -248,12 +248,12 @@ export const ExtendedViews: React.FC<ExtendedViewsProps> = ({
                       required
                       rows={4}
                       placeholder="Tell us about your roasting setup or coffee preferences..."
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#2C221E]/20 text-xs focus:ring-2 focus:ring-[#9E5328] focus:outline-none"
+                      className="w-full px-3.5 py-3 rounded-xl border border-[#2C221E]/20 text-base sm:text-xs focus:ring-2 focus:ring-[#9E5328] focus:outline-none"
                     />
                   </div>
                   <button
                     type="submit"
-                    className="w-full py-3 bg-[#9E5328] hover:bg-[#85441E] text-white font-bold text-xs rounded-xl transition-all shadow-sm flex items-center justify-center gap-2"
+                    className="w-full py-3.5 bg-[#9E5328] hover:bg-[#85441E] text-white font-bold text-xs sm:text-sm rounded-xl transition-all shadow-sm flex items-center justify-center gap-2 min-h-[48px]"
                   >
                     <span>Send Inquiry</span>
                     <Send className="w-3.5 h-3.5" />

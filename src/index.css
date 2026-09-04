@@ -15,10 +15,27 @@
   --color-earth-green-light: #41624E;
 }
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   font-family: var(--font-sans);
   background-color: #FBF8F3;
   color: #2C221E;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+/* Safe area insets for iOS notches and home indicator pills */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 1rem);
+}
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0rem);
 }
 
 h1, h2, h3, .font-serif {

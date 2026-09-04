@@ -177,18 +177,18 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         </div>
 
         {/* Bottom Bar: Policy Links & Payment Badges */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-[#8C7A70]">
+        <div className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 text-xs text-[#8C7A70]">
           
-          <div className="flex flex-wrap items-center gap-4 sm:gap-6">
-            <p>© {new Date().getFullYear()} Validreams Coffee Inc. All rights reserved.</p>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <p>© {new Date().getFullYear()} Validreams Coffee Inc.</p>
             <a href="#privacy" className="hover:text-[#D98246] transition-colors">Privacy Policy</a>
             <a href="#terms" className="hover:text-[#D98246] transition-colors">Terms of Service</a>
             <a href="#traceability" className="hover:text-[#D98246] transition-colors">Traceability Chain</a>
           </div>
 
           {/* Payment Badges */}
-          <div className="flex items-center gap-2.5">
-            <span className="text-[11px] text-[#A8988E] mr-1">Secured Payments:</span>
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="text-[11px] text-[#A8988E] mr-1 w-full sm:w-auto">Secured Payments:</span>
             <div className="px-2 py-1 bg-[#2C221E] border border-[#3F302A] rounded text-[10px] font-bold text-[#EAE0D5]">
               VISA
             </div>

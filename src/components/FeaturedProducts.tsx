@@ -44,14 +44,14 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
           </div>
 
           {/* Process Filter Pills */}
-          <div className="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none">
-            <Filter className="w-4 h-4 text-[#8C7A70] hidden sm:block mr-1" />
+          <div className="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0 max-w-full">
+            <Filter className="w-4 h-4 text-[#8C7A70] hidden sm:block mr-1 shrink-0" />
             {filterTabs.map((tab) => (
               <button
                 key={tab}
                 type="button"
                 onClick={() => setActiveProcessFilter(tab)}
-                className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all ${
+                className={`px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all min-h-[38px] flex items-center shrink-0 ${
                   activeProcessFilter === tab
                     ? 'bg-[#2C221E] text-[#FBF8F3] shadow-xs'
                     : 'bg-[#F5EFEB] text-[#524138] hover:bg-[#EAE0D5] hover:text-[#1D1512]'

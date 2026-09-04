@@ -124,7 +124,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                   key={w}
                   type="button"
                   onClick={() => setSelectedWeight(w)}
-                  className={`px-2 py-0.5 text-xs font-semibold rounded-md transition-all ${
+                  className={`px-2.5 py-1 text-xs font-semibold rounded-md min-h-[32px] transition-all ${
                     selectedWeight === w
                       ? 'bg-[#2C221E] text-white shadow-xs'
                       : 'text-[#6B5A51] hover:text-[#2C221E]'
@@ -139,7 +139,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           {/* Price and Add button */}
           <div className="flex items-center justify-between gap-3 pt-1">
             <div className="flex flex-col">
-              <span className="text-xs text-[#8C7A70]">Price ({selectedWeight})</span>
+              <span className="text-[11px] text-[#8C7A70]">Price ({selectedWeight})</span>
               <span className="font-serif text-xl font-bold text-[#1D1512]">
                 ${currentPrice.toFixed(2)}
               </span>
@@ -150,16 +150,16 @@ export const ProductCard: React.FC<ProductCardProps> = ({
               type="button"
               onClick={handleAdd}
               disabled={isAdded}
-              className={`flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-bold transition-all duration-200 shadow-sm ${
+              className={`flex-1 flex items-center justify-center gap-2 py-3 sm:py-2.5 px-4 rounded-xl text-xs font-bold min-h-[44px] transition-all duration-200 shadow-sm active:scale-95 ${
                 isAdded
                   ? 'bg-[#2F4839] text-white'
-                  : 'bg-[#9E5328] hover:bg-[#85441E] text-white hover:shadow-md active:scale-95'
+                  : 'bg-[#9E5328] hover:bg-[#85441E] text-white hover:shadow-md'
               }`}
             >
               {isAdded ? (
                 <>
                   <Check className="w-4 h-4" />
-                  <span>Added to Cart</span>
+                  <span>Added!</span>
                 </>
               ) : (
                 <>

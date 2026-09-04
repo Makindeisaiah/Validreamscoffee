@@ -30,7 +30,7 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({
   const currentPrice = product.prices[selectedWeight];
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto p-4 sm:p-6 lg:p-8 flex items-center justify-center">
+    <div className="fixed inset-0 z-50 overflow-y-auto p-3 sm:p-6 lg:p-8 flex min-h-full items-start sm:items-center justify-center py-6 sm:py-8">
       {/* Backdrop */}
       <div 
         className="fixed inset-0 bg-black/60 backdrop-blur-xs transition-opacity" 
@@ -38,20 +38,21 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({
       />
 
       {/* Modal Container */}
-      <div className="relative bg-[#FBF8F3] rounded-3xl max-w-3xl w-full overflow-hidden shadow-2xl border border-[#2C221E]/15 z-10 animate-in zoom-in-95 duration-200">
+      <div className="relative bg-[#FBF8F3] rounded-2xl sm:rounded-3xl max-w-3xl w-full overflow-hidden shadow-2xl border border-[#2C221E]/15 z-10 my-auto animate-in zoom-in-95 duration-200">
         
         {/* Close Button */}
         <button
           type="button"
           onClick={onClose}
-          className="absolute top-4 right-4 p-2.5 bg-white/90 rounded-full text-[#2C221E] hover:bg-white shadow-sm z-20"
+          className="absolute top-3 right-3 sm:top-4 sm:right-4 p-2 bg-white/90 rounded-full text-[#2C221E] hover:bg-white shadow-sm z-20 min-w-[40px] min-h-[40px] flex items-center justify-center"
+          aria-label="Close modal"
         >
           <X className="w-5 h-5" />
         </button>
 
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Left: Product Image */}
-          <div className="relative bg-[#F5EFEB] aspect-square md:aspect-auto">
+          <div className="relative bg-[#F5EFEB] aspect-[16/10] sm:aspect-square md:aspect-auto">
             <img
               src={product.image}
               alt={product.name}
@@ -124,7 +125,7 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({
             </div>
 
             {/* Bottom Actions */}
-            <div className="pt-4 border-t border-[#2C221E]/10 space-y-3">
+            <div className="pt-3 sm:pt-4 border-t border-[#2C221E]/10 space-y-3">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold text-[#1D1512]">Select Pouch Size:</span>
                 <div className="flex gap-1.5">
@@ -133,7 +134,7 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({
                       key={w}
                       type="button"
                       onClick={() => setSelectedWeight(w)}
-                      className={`px-3 py-1 text-xs font-bold rounded-lg transition-all ${
+                      className={`px-3 py-1.5 text-xs font-bold rounded-lg transition-all min-h-[36px] ${
                         selectedWeight === w
                           ? 'bg-[#2C221E] text-white shadow-xs'
                           : 'bg-white text-[#524138] border border-[#2C221E]/10'
@@ -147,8 +148,8 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({
 
               <div className="flex items-center justify-between gap-4 pt-1">
                 <div>
-                  <span className="text-xs text-[#8C7A70] block">Price</span>
-                  <span className="font-serif text-2xl font-bold text-[#1D1512]">
+                  <span className="text-[10px] text-[#8C7A70] block uppercase">Price</span>
+                  <span className="font-serif text-xl sm:text-2xl font-bold text-[#1D1512]">
                     ${currentPrice.toFixed(2)}
                   </span>
                 </div>
@@ -157,7 +158,7 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({
                   type="button"
                   onClick={handleAdd}
                   disabled={added}
-                  className={`flex-1 py-3 px-5 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-2 ${
+                  className={`flex-1 py-3.5 px-5 rounded-xl font-bold text-xs sm:text-sm transition-all flex items-center justify-center gap-2 min-h-[48px] active:scale-95 ${
                     added ? 'bg-[#2F4839] text-white' : 'bg-[#9E5328] hover:bg-[#85441E] text-white shadow-md'
                   }`}
                 >
