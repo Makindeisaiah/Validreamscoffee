@@ -32,7 +32,7 @@ export const Header: React.FC<HeaderProps> = ({
   };
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-[#FBF8F3]/95 backdrop-blur-md border-b border-[#2C221E]/10 transition-colors">
+    <header className="fixed top-0 left-0 right-0 z-40 w-full bg-[#FBF8F3]/95 backdrop-blur-md border-b border-[#2C221E]/10 transition-colors shadow-xs">
       {/* Announcement Bar */}
       <div className="bg-[#2C221E] text-[#F5EFEB] text-[11px] sm:text-xs font-medium py-1.5 sm:py-2 px-3 sm:px-4 text-center tracking-normal sm:tracking-wide flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
         <span className="inline-flex items-center gap-1 text-[#D98246]">
@@ -41,7 +41,7 @@ export const Header: React.FC<HeaderProps> = ({
         </span>
         <span className="hidden sm:inline">Preserving living origin sugars & aroma.</span>
         <span className="text-[#D98246] font-semibold underline underline-offset-2 cursor-pointer whitespace-nowrap" onClick={() => onNavigate('shop')}>
-          Free Shipping on $50+
+          Free Shipping on ₦60,000+
         </span>
       </div>
 

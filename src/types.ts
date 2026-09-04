@@ -35,4 +35,24 @@ export interface TrustItem {
   description: string;
 }
 
-export type PageView = 'home' | 'shop' | 'about' | 'blog' | 'contact';
+export type PageView = 'home' | 'shop' | 'about' | 'blog' | 'contact' | 'checkout';
+
+export interface OrderDetails {
+  orderId: string;
+  customer: {
+    fullName: string;
+    email: string;
+    phone: string;
+    address: string;
+    city: string;
+    state: string;
+    deliveryNotes?: string;
+  };
+  deliveryMethod: 'standard' | 'express';
+  paymentMethod: 'paystack' | 'bank_transfer' | 'ussd' | 'pay_on_delivery';
+  items: CartItem[];
+  subtotal: number;
+  shipping: number;
+  total: number;
+  createdAt: string;
+}

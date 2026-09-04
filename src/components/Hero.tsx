@@ -88,7 +88,7 @@ export const Hero: React.FC<HeroProps> = ({ onShopClick, onLearnClick }) => {
               <span className="flex h-2 w-2 rounded-full bg-emerald-600 animate-ping shrink-0" />
               <span className="leading-snug">Current Batch: <strong>Lot #VR-2026B</strong> — Sealed at origin under vacuum</span>
               <span className="hidden sm:inline">•</span>
-              <span className="font-medium text-[#2F4839]">Free US Shipping Over $50</span>
+              <span className="font-medium text-[#2F4839]">Free Delivery Across Nigeria on ₦60,000+</span>
             </div>
 
           </div>

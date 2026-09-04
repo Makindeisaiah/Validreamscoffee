@@ -1,6 +1,7 @@
 import React from 'react';
 import { X, Trash2, Plus, Minus, ShoppingBag, ArrowRight, ShieldCheck, Truck } from 'lucide-react';
 import { CartItem } from '../types';
+import { formatNaira } from '../utils';
 
 interface CartDrawerProps {
   isOpen: boolean;
@@ -25,7 +26,8 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
     return acc + item.product.prices[item.weight] * item.quantity;
   }, 0);
 
-  const freeShippingThreshold = 50;
+  const freeShippingThreshold = 60000;
+  const shippingFee = subtotal >= freeShippingThreshold || items.length === 0 ? 0 : 3500;
   const progressToFreeShipping = Math.min(100, (subtotal / freeShippingThreshold) * 100);
   const remainingForFreeShipping = Math.max(0, freeShippingThreshold - subtotal);
 
@@ -64,9 +66,9 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
               <span className="flex items-center gap-1">
                 <Truck className="w-3.5 h-3.5 text-[#2F4839]" />
                 {remainingForFreeShipping > 0 ? (
-                  <>Add <strong className="text-[#9E5328]">${remainingForFreeShipping.toFixed(2)}</strong> for Free US Shipping</>
+                  <>Add <strong className="text-[#9E5328]">{formatNaira(remainingForFreeShipping)}</strong> for Free Nationwide Delivery</>
                 ) : (
-                  <span className="text-emerald-700 font-bold">🎉 You unlocked FREE Shipping!</span>
+                  <span className="text-emerald-700 font-bold">🎉 You unlocked FREE Delivery!</span>
                 )}
               </span>
               <span>{Math.round(progressToFreeShipping)}%</span>
@@ -156,7 +158,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                         </div>
 
                         <span className="font-serif text-sm font-bold text-[#1D1512]">
-                          ${totalItemPrice.toFixed(2)}
+                          {formatNaira(totalItemPrice)}
                         </span>
                       </div>
                     </div>
@@ -172,20 +174,20 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
               <div className="space-y-1.5 text-xs text-[#524138]">
                 <div className="flex justify-between">
                   <span>Subtotal</span>
-                  <span className="font-semibold text-[#1D1512]">${subtotal.toFixed(2)}</span>
+                  <span className="font-semibold text-[#1D1512]">{formatNaira(subtotal)}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Hermetic Packaging & Handling</span>
                   <span className="text-emerald-700 font-medium">Free</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Shipping</span>
-                  <span>{remainingForFreeShipping === 0 ? 'Free' : '$5.99'}</span>
+                  <span>Nationwide Shipping</span>
+                  <span>{shippingFee === 0 ? 'Free' : formatNaira(shippingFee)}</span>
                 </div>
                 <div className="flex justify-between pt-2 border-t border-gray-100 text-base font-serif font-bold text-[#1D1512]">
                   <span>Total</span>
                   <span>
-                    ${(subtotal + (remainingForFreeShipping === 0 ? 0 : 5.99)).toFixed(2)}
+                    {formatNaira(subtotal + shippingFee)}
                   </span>
                 </div>
               </div>

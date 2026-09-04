@@ -17,6 +17,7 @@ import { Footer } from './components/Footer';
 import { CartDrawer } from './components/CartDrawer';
 import { QuickViewModal } from './components/QuickViewModal';
 import { ExtendedViews } from './components/ExtendedViews';
+import { CheckoutPage } from './components/CheckoutPage';
 import { Check, ShoppingBag, X } from 'lucide-react';
 
 export default function App() {
@@ -122,8 +123,8 @@ export default function App() {
         }}
       />
 
-      {/* Main Content: Home Page vs. Reusable Extended Pages */}
-      <main className="flex-1">
+      {/* Main Content: Home Page vs. Checkout Page vs. Reusable Extended Pages */}
+      <main className="flex-1 pt-[96px] sm:pt-[112px]">
         {currentPage === 'home' ? (
           <>
             {/* 2. Hero Section */}
@@ -160,6 +161,17 @@ export default function App() {
             {/* 6. Newsletter Signup */}
             <NewsletterSignup />
           </>
+        ) : currentPage === 'checkout' ? (
+          <CheckoutPage
+            items={cartItems}
+            onUpdateQuantity={handleUpdateQuantity}
+            onRemoveItem={handleRemoveItem}
+            onClearCart={() => setCartItems([])}
+            onNavigate={(page) => {
+              setCurrentPage(page);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          />
         ) : (
           <ExtendedViews
             page={currentPage}
@@ -190,7 +202,9 @@ export default function App() {
         onUpdateQuantity={handleUpdateQuantity}
         onRemoveItem={handleRemoveItem}
         onCheckout={() => {
-          showToast('Proceeding to secure checkout...');
+          setCartDrawerOpen(false);
+          setCurrentPage('checkout');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
         }}
       />
 

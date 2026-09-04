@@ -189,20 +189,20 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           {/* Payment Badges */}
           <div className="flex flex-wrap items-center gap-2">
             <span className="text-[11px] text-[#A8988E] mr-1 w-full sm:w-auto">Secured Payments:</span>
+            <div className="px-2 py-1 bg-[#2C221E] border border-[#3F302A] rounded text-[10px] font-bold text-[#D98246]">
+              PAYSTACK
+            </div>
             <div className="px-2 py-1 bg-[#2C221E] border border-[#3F302A] rounded text-[10px] font-bold text-[#EAE0D5]">
-              VISA
+              VERVE
             </div>
             <div className="px-2 py-1 bg-[#2C221E] border border-[#3F302A] rounded text-[10px] font-bold text-[#EAE0D5]">
               MASTERCARD
             </div>
             <div className="px-2 py-1 bg-[#2C221E] border border-[#3F302A] rounded text-[10px] font-bold text-[#EAE0D5]">
-              AMEX
+              VISA
             </div>
             <div className="px-2 py-1 bg-[#2C221E] border border-[#3F302A] rounded text-[10px] font-bold text-[#EAE0D5]">
-              APPLE PAY
-            </div>
-            <div className="px-2 py-1 bg-[#2C221E] border border-[#3F302A] rounded text-[10px] font-bold text-[#EAE0D5]">
-              PAYPAL
+              BANK TRANSFER
             </div>
           </div>
 

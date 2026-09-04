@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { X, Check, ShoppingBag, Sparkles, MapPin, ShieldCheck, Gauge, Droplets } from 'lucide-react';
 import { Product } from '../types';
+import { formatNaira } from '../utils';
 
 interface QuickViewModalProps {
   product: Product | null;
@@ -150,7 +151,7 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({
                 <div>
                   <span className="text-[10px] text-[#8C7A70] block uppercase">Price</span>
                   <span className="font-serif text-xl sm:text-2xl font-bold text-[#1D1512]">
-                    ${currentPrice.toFixed(2)}
+                    {formatNaira(currentPrice)}
                   </span>
                 </div>
 

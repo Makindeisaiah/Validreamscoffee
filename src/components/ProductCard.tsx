@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ShoppingBag, Eye, Check, Sparkles, MapPin } from 'lucide-react';
 import { Product } from '../types';
+import { formatNaira } from '../utils';
 
 interface ProductCardProps {
   product: Product;
@@ -141,7 +142,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             <div className="flex flex-col">
               <span className="text-[11px] text-[#8C7A70]">Price ({selectedWeight})</span>
               <span className="font-serif text-xl font-bold text-[#1D1512]">
-                ${currentPrice.toFixed(2)}
+                {formatNaira(currentPrice)}
               </span>
             </div>
 
