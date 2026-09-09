@@ -1,6 +1,6 @@
 {
   "name": "Validreams Coffee",
-  "description": "Validreams Coffee offers unroasted, hermetically sealed-bag raw coffee directly from origin farms, locking in pure freshness, aroma, and authenticity.",
+  "description": "Validreams Coffee offers 100% single-origin Nigerian unroasted raw coffee from the Mambilla Plateau and highland farms, hermetically sealed in protective barrier bags for peak freshness.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

@@ -40,7 +40,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <div className="space-y-2 text-xs text-[#A8988E]">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-[#D98246] shrink-0" />
-                <span>Harvest Lab: 220 Roastery Way, Portland, OR & Addis Ababa, ET</span>
+                <span>Harvest Lab & Origin Sorting: Mambilla Highland Mills, Taraba State & Lagos, Nigeria</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-[#D98246] shrink-0" />
@@ -89,27 +89,27 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <ul className="space-y-2.5 text-xs text-[#A8988E]">
               <li>
                 <button onClick={() => onNavigate('shop')} className="hover:text-[#D98246] transition-colors">
-                  All Raw Origins
+                  All Nigerian Origins
                 </button>
               </li>
               <li>
                 <button onClick={() => onNavigate('shop')} className="hover:text-[#D98246] transition-colors">
-                  African Floral Micro-Lots
+                  Mambilla Plateau Arabica
                 </button>
               </li>
               <li>
                 <button onClick={() => onNavigate('shop')} className="hover:text-[#D98246] transition-colors">
-                  Latin American Honey Crops
+                  Jos Plateau Sun-Dried Lots
                 </button>
               </li>
               <li>
                 <button onClick={() => onNavigate('shop')} className="hover:text-[#D98246] transition-colors">
-                  Indonesian Wet-Hulled
+                  Obudu Cloud Forest Honey
                 </button>
               </li>
               <li>
                 <button onClick={() => onNavigate('shop')} className="hover:text-[#D98246] transition-colors flex items-center gap-1">
-                  <span>Home Roasting Sampler</span>
+                  <span>Nigerian Highland Sampler</span>
                   <span className="text-[10px] bg-[#9E5328] text-white px-1.5 py-0.2 rounded font-semibold">New</span>
                 </button>
               </li>
@@ -129,17 +129,17 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </li>
               <li>
                 <button onClick={() => onNavigate('blog')} className="hover:text-[#D98246] transition-colors">
-                  Skillet & Air Roasting Guide
+                  Nigerian Coffee Revival & Terroir
                 </button>
               </li>
               <li>
                 <button onClick={() => onNavigate('blog')} className="hover:text-[#D98246] transition-colors">
-                  Green Bean Moisture & Storage
+                  Skillet & Stovetop Roasting Guide
                 </button>
               </li>
               <li>
                 <button onClick={() => onNavigate('about')} className="hover:text-[#D98246] transition-colors">
-                  Direct Trade Sourcing Reports
+                  Mambilla Smallholder Direct Trade
                 </button>
               </li>
             </ul>

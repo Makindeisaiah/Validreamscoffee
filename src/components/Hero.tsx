@@ -26,18 +26,18 @@ export const Hero: React.FC<HeroProps> = ({ onShopClick, onLearnClick }) => {
               className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-[#2F4839]/10 border border-[#2F4839]/20 text-[#2F4839] text-[11px] sm:text-xs font-semibold tracking-wide"
             >
               <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#2F4839] shrink-0" />
-              <span>Hermetically Sealed at Harvest • 100% Unroasted Raw</span>
+              <span>100% Single-Origin Nigerian Raw Coffee • Hermetically Sealed at Source</span>
             </div>
 
             {/* Main Headline */}
             <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#1D1512] leading-[1.15] sm:leading-[1.12]">
               Raw & Sealed at the Source. <br className="hidden sm:inline" />
-              <span className="text-[#9E5328] italic font-normal">Pure Origin Coffee</span>, Unaltered.
+              <span className="text-[#9E5328] italic font-normal">Pure Nigerian Coffee</span>, Unaltered.
             </h1>
 
             {/* Subheadline explaining the raw & sealed difference */}
             <p className="text-base sm:text-xl text-[#524138] max-w-2xl font-normal leading-relaxed">
-              Roasted coffee stales in 21 days. We capture fresh micro-lot green beans straight from farm drying beds and seal them in airtight, multi-ply barrier pouches with degassing valves. Experience unmatched vibrancy, zero oxidation, and living flavor notes when you roast on your terms.
+              Roasted coffee stales in 21 days. We harvest specialty micro-lot green beans directly from Nigeria's volcanic Mambilla Plateau and highland farms, sealing them in airtight multi-ply barrier pouches with degassing valves. Experience living flavor notes and pure Nigerian terroir when you roast on your terms.
             </p>
 
             {/* Value Checkpoints */}
@@ -86,7 +86,7 @@ export const Hero: React.FC<HeroProps> = ({ onShopClick, onLearnClick }) => {
             {/* Social Proof / Harvest Transparency Snippet */}
             <div className="pt-3 border-t border-[#2C221E]/10 flex flex-wrap items-center gap-2 sm:gap-4 text-xs text-[#6B5A51] w-full">
               <span className="flex h-2 w-2 rounded-full bg-emerald-600 animate-ping shrink-0" />
-              <span className="leading-snug">Current Batch: <strong>Lot #VR-2026B</strong> — Sealed at origin under vacuum</span>
+              <span className="leading-snug">Current Batch: <strong>Lot #VR-NG2026 (Mambilla Highland Arabica)</strong> — Sealed under vacuum</span>
               <span className="hidden sm:inline">•</span>
               <span className="font-medium text-[#2F4839]">Free Delivery Across Nigeria on ₦60,000+</span>
             </div>

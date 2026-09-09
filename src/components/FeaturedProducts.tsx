@@ -33,13 +33,13 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
           <div className="space-y-3 max-w-2xl">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#9E5328]/10 text-[#9E5328] text-xs font-semibold uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Current Season Reserves</span>
+              <span>Nigerian Highland Harvest Reserves</span>
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1D1512] tracking-tight">
               The Sealed Harvest Collection
             </h2>
             <p className="text-base text-[#524138]">
-              Raw green single-origin beans, hermetically sealed at farm washing stations. Clean moisture retention, living enzymes, and zero oxidation until you fire up your roaster.
+              Raw green single-origin Nigerian beans, hermetically sealed at farm washing stations across Mambilla, Jos, Obudu, and Idanre. Clean moisture retention, living enzymes, and zero oxidation until you fire up your roaster.
             </p>
           </div>
 

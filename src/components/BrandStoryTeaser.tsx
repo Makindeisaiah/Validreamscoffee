@@ -26,7 +26,7 @@ export const BrandStoryTeaser: React.FC<BrandStoryTeaserProps> = ({ onLearnMore 
               {/* Origin badge overlay */}
               <div className="absolute top-4 right-4 bg-[#2C221E]/90 text-[#FBF8F3] px-3.5 py-2 rounded-xl backdrop-blur-md text-xs font-semibold flex items-center gap-2 border border-white/10 shadow-lg">
                 <MapPin className="w-4 h-4 text-[#D98246]" />
-                <span>Direct From Origin Stations</span>
+                <span>Mambilla & Nigerian Highlands</span>
               </div>
 
               {/* Bottom transparency stamp */}
@@ -34,10 +34,10 @@ export const BrandStoryTeaser: React.FC<BrandStoryTeaserProps> = ({ onLearnMore 
                 <div className="flex items-center justify-between text-xs text-[#2C221E]">
                   <div>
                     <span className="font-bold block text-sm font-serif">The Seal of Origin</span>
-                    <span className="text-[#6B5A51]">Guaranteed oxygen barrier &lt; 0.1%</span>
+                    <span className="text-[#6B5A51]">Guaranteed oxygen barrier &lt; 0.1% • Nigeria Arabica</span>
                   </div>
                   <div className="text-right font-mono text-[11px] text-[#9E5328] font-bold">
-                    HARVEST #2026-M
+                    MAMBILLA #VR-NG
                   </div>
                 </div>
               </div>
@@ -60,11 +60,11 @@ export const BrandStoryTeaser: React.FC<BrandStoryTeaserProps> = ({ onLearnMore 
             </h2>
 
             <p className="text-base sm:text-lg text-[#524138] leading-relaxed">
-              Every coffee enthusiast knows that once coffee is roasted, its volatile aromatics degrade in days. But few realize that unroasted green coffee is a living agricultural seed. When left in porous burlap sacks across ocean freighters, it absorbs ambient humidity, losing its terroir and crisp fruit acids.
+              Every coffee enthusiast knows that once coffee is roasted, its volatile aromatics degrade in days. But few realize that unroasted green coffee is a living agricultural seed. When left in porous burlap sacks across transit routes, it absorbs ambient humidity, losing its distinctive terroir and crisp fruit acids.
             </p>
 
             <p className="text-sm sm:text-base text-[#524138] leading-relaxed">
-              At <span className="font-semibold text-[#1D1512]">Validreams</span>, we partner directly with independent washing stations in Ethiopia, Colombia, Costa Rica, and Sumatra. The moment sorting and drying ends, our beans are hermetically sealed in multi-layer barrier foil with one-way degassing valves. 
+              At <span className="font-semibold text-[#1D1512]">Validreams</span>, we partner directly with independent washing stations across Nigeria's finest high-altitude terroirs — from the misty volcanic plateaus of Mambilla in Taraba State to the cloud forests of Obudu and the granite peaks of Jos. The moment sorting and drying ends, our Nigerian raw beans are hermetically sealed in multi-layer barrier foil with one-way degassing valves. 
             </p>
 
             {/* Key Pillars */}
